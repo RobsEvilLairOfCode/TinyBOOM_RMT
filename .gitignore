@@ -1,0 +1,5 @@
+tb/*/obj_dir
+obj_dir
+tb_c/*/obj_dir
+*.vcd
+*.gtkw

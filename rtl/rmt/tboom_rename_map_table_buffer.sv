@@ -44,7 +44,7 @@ module tboom_rename_map_table_buffer #(
     logic [REG_PHYS_ADDR_WIDTH - 1: 0] arch_array [CHECKPOINT_DEPTH + 1][MEMORY_WIDTH];
 
 
-    always_ff @(posedge clk or negedge rst_n) begin
+    always_ff @(posedge clk) begin
         if(!rst_n) begin
             for(int memory_counter = 0; memory_counter < MEMORY_WIDTH; memory_counter++) begin
                 for(int layer_counter = 0; layer_counter < CHECKPOINT_DEPTH + 1; layer_counter++) begin

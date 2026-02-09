@@ -40,7 +40,7 @@ module tboom_freelist_buffer #(
     logic [POINTER_WIDTH:0] write_pointers_next [CHECKPOINT_DEPTH + 1];
 
         
-    always_ff @(posedge clk or negedge rst_n) begin
+    always_ff @(posedge clk) begin
         
 
         if(!rst_n) begin //Reset signal is low
